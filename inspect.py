@@ -38,7 +38,7 @@ else :
 # print(entropy)
 # print(error_rate)
 
-with open(sys.argv[2], 'w') as output_file:
-    output_file.write(f'entropy: {entropy}\nerror: {error_rate}')
+with open(sys.argv[2], 'w') as small_inspect:
+    small_inspect.write(f'entropy: {entropy}\nerror: {error_rate}')
 
 

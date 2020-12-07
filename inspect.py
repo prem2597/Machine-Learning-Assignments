@@ -25,4 +25,20 @@ with open(sys.argv[1]) as csv_file:
 
 total = label1 + label2
 
+probability1 = label1 / total
+probability2 = label2 / total
+
+entropy = - probability1 * math.log2(probability1) - probability2 * math.log2(probability2)
+
+if label1 >= label2 :
+    error_rate = probability2
+else :
+    error_rate = probability1
+
+# print(entropy)
+# print(error_rate)
+
+with open(sys.argv[2], 'w') as output_file:
+    output_file.write(f'entropy: {entropy}\nerror: {error_rate}')
+
 
